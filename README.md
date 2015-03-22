@@ -14,18 +14,18 @@ One point is that just varing speed or size of two visible object, shows paralla
 
 Just add few lines of codes and we can achieve that :
 
-```#scroll view delegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView1 {
+#scroll view delegate
+```- (void)scrollViewDidScroll:(UIScrollView *)scrollView1 {
     CGFloat scrollOffset = scrollView.contentOffset.y;
     
     //-- that is image view where we want to show effect
     imgView.frame = [self parallaxFrame:imgViewFrame
                             scrollFrame:scrollView1.frame
                       withParallaxValue:scrollOffset];
-}
+}```
 
 # parallax effect logic
-- (CGRect)parallaxFrame:(CGRect)frame
+```- (CGRect)parallaxFrame:(CGRect)frame
             scrollFrame:(CGRect)scrollFrame
       withParallaxValue:(CGFloat)val
 {
