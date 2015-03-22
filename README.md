@@ -12,6 +12,9 @@ So How to achieve this?
 
 One point is that just varing speed or size of two visible object, shows parallax effect. So lets assume a situation where scrollview has a image at top and when scroll down it must zoom up to center, and when scroll up image must be vary with different speed (should be slow).
 
+![alt tag](https://raw.githubusercontent.com/dayitv89/Parallax/master/ParallaxEffect/ParallaxEffect/HOME.png)
+
+
 Just add few lines of codes and we can achieve that :
 
 ```
