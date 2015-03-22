@@ -67,22 +67,20 @@
 }
 
 
-
+#pragma mark - scroll view delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView1 {
     CGFloat scrollOffset = scrollView.contentOffset.y;
     
     imgView.frame = [self parallexFrame:imgViewFrame
-                       withParallexView:imgView
                             scrollFrame:scrollView1.frame
                       withParallexValue:scrollOffset];
 }
 
-//-- parallax effect origal logic : when scroll down image zoom up, scroll up then speed of image frame is slow
+#pragma mark - parallax effect logic
+//-- parallax effect orignal logic : when scroll down image zoom up, scroll up then speed of image frame is slow
 - (CGRect)parallexFrame:(CGRect)frame
-       withParallexView:(UIView*)viewParallex
             scrollFrame:(CGRect)scrollFrame
       withParallexValue:(CGFloat)val
-
 {
     NSInteger factor = 4;
     if (val > 0) {
