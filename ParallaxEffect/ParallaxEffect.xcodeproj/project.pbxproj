@@ -23,6 +23,7 @@
 		A490AF3E1ABECFC400F72250 /* ParallaxEffectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A490AF3D1ABECFC400F72250 /* ParallaxEffectTests.m */; };
 		A490AF481ABECFED00F72250 /* holi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A490AF471ABECFED00F72250 /* holi.jpg */; };
 		A490AF4A1ABECFF500F72250 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A490AF491ABECFF500F72250 /* bg.png */; };
+		A4E95A0C1ABEDFB400007ED0 /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E95A0B1ABEDFB400007ED0 /* HOME.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A490AF3D1ABECFC400F72250 /* ParallaxEffectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxEffectTests.m; sourceTree = "<group>"; };
 		A490AF471ABECFED00F72250 /* holi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = holi.jpg; sourceTree = "<group>"; };
 		A490AF491ABECFF500F72250 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		A4E95A0B1ABEDFB400007ED0 /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				A490AF281ABECFC400F72250 /* ViewController.m */,
 				A490AF471ABECFED00F72250 /* holi.jpg */,
 				A490AF491ABECFF500F72250 /* bg.png */,
+				A4E95A0B1ABEDFB400007ED0 /* HOME.png */,
 				A490AF2A1ABECFC400F72250 /* Images.xcassets */,
 				A490AF191ABECFC400F72250 /* Supporting Files */,
 			);
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E95A0C1ABEDFB400007ED0 /* HOME.png in Resources */,
 				A490AF4A1ABECFF500F72250 /* bg.png in Resources */,
 				A490AF2B1ABECFC400F72250 /* Images.xcassets in Resources */,
 				A490AF1D1ABECFC400F72250 /* InfoPlist.strings in Resources */,
@@ -464,6 +468,7 @@
 				A490AF431ABECFC400F72250 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A490AF441ABECFC400F72250 /* Build configuration list for PBXNativeTarget "ParallaxEffectTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +477,7 @@
 				A490AF461ABECFC400F72250 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
