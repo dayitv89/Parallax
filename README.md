@@ -1,17 +1,20 @@
-# Parallax
-Parallax effect demo
+# Parallax effect demo
 
 what is Parallax effect? 
+
+
 read from here : http://en.wikipedia.org/wiki/Parallax
 But in term of programming, we can simply say varing speed/size of two different visible objects shows parallax effect.
 Now a days in web sites and mobile application it is most common attractive point. 
 
 So How to achieve this?
+
+
 One point is that just varing speed or size of two visible object, shows parallax effect. So lets assume a situation where scrollview has a image at top and when scroll down it must zoom up to center, and when scroll up image must be vary with different speed (should be slow).
 
 Just add few lines of codes and we can achieve that :
 
-#pragma mark - scroll view delegate
+#scroll view delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView1 {
     CGFloat scrollOffset = scrollView.contentOffset.y;
     
@@ -21,7 +24,7 @@ Just add few lines of codes and we can achieve that :
                       withParallaxValue:scrollOffset];
 }
 
-#pragma mark - parallax effect logic
+# parallax effect logic
 - (CGRect)parallaxFrame:(CGRect)frame
             scrollFrame:(CGRect)scrollFrame
       withParallaxValue:(CGFloat)val
