@@ -14,7 +14,7 @@ One point is that just varing speed or size of two visible object, shows paralla
 
 Just add few lines of codes and we can achieve that :
 
-#scroll view delegate
+```#scroll view delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView1 {
     CGFloat scrollOffset = scrollView.contentOffset.y;
     
@@ -38,7 +38,7 @@ Just add few lines of codes and we can achieve that :
     
     // scroll down (must be zoom to center)
     return CGRectMake(frame.origin.x + val, frame.origin.y + val, frame.size.width - val*factor, frame.size.height - val*factor);
-}
+}```
 
 
 
