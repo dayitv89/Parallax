@@ -29,13 +29,12 @@ before_install:
   # - gem install fastlane --no-rdoc --no-ri --no-document --quiet
 #   - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 #   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-# script:
+script:
+  - xcodebuild -project ParallaxEffect.xcodeproj -target ParallaxEffect -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 #   - set -o pipefail
 #   - fastlane $FASTLANE_LANE configuration:Debug --env $FASTLANE_ENV
 #   - fastlane $FASTLANE_LANE configuration:Release --env $FASTLANE_ENV
-after_success:
-  - xcodebuild -project ParallaxEffect.xcodeproj -target ParallaxEffect -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-
+# after_success:
 #   - if [ "$FASTLANE_LANE" == "code_coverage" ]; then
 #      bash <(curl -s https://codecov.io/bash);
 #     fi
