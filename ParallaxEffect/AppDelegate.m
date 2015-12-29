@@ -9,11 +9,19 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-
+/**
+ *  Launch at the first time only; app config here
+ *
+ *  @param application
+ *  @param launchOptions
+ *
+ *  @return must return YES
+ */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    return YES;
+//    return YES;
+    this is non comment code
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
