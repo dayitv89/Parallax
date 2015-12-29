@@ -20,7 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    return YES;
+    //this is new cmt
+    return YES;
 //    this is non comment code
 }
 							
