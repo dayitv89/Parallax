@@ -34,16 +34,17 @@ before_install:
 #   - fastlane $FASTLANE_LANE configuration:Debug --env $FASTLANE_ENV
 #   - fastlane $FASTLANE_LANE configuration:Release --env $FASTLANE_ENV
 after_success:
-  - cd ParallaxEffect
-  - ipa build
+  - xcodebuild -project ParallaxEffect.xcodeproj -target ParallaxEffect -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
 #   - if [ "$FASTLANE_LANE" == "code_coverage" ]; then
 #      bash <(curl -s https://codecov.io/bash);
 #     fi
-# after_failure:
-#  - cat -n ~/Library/Logs/scan/*
-#  - cat -n $TMPDIR/com.apple.dt.XCTest-status/Session*.log
-#  - cat -n ~/Library/Logs/DiagnosticReports/xctest*.crash
-# deploy:
+after_failure:
+ - cat -n ~/Library/Logs/scan/*
+ - cat -n $TMPDIR/com.apple.dt.XCTest-status/Session*.log
+ - cat -n ~/Library/Logs/DiagnosticReports/xctest*.crash
+deploy:
+  - ipa build
 #   provider: script
 #   script: fastlane complete_framework_release --env deploy
 #   on:
