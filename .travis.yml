@@ -6,6 +6,7 @@ env:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
   - FASTLANE_LANE=ci_commit
+  - CODECOV_TOKEN=:a5b04b1e-9e49-4ddd-9d99-98ad1646106f
 matrix:
   include:
     - osx_image: xcode7.2
@@ -31,12 +32,14 @@ matrix:
 #   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
   - xcodebuild -project ParallaxEffect.xcodeproj -target ParallaxEffect -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool -project ParallaxEffect.xcodeproj -scheme ParallaxEffect build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 #   - set -o pipefail
 #   - fastlane $FASTLANE_LANE configuration:Debug --env $FASTLANE_ENV
 #   - fastlane $FASTLANE_LANE configuration:Release --env $FASTLANE_ENV
-# after_success:
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 #   - if [ "$FASTLANE_LANE" == "code_coverage" ]; then
-#      bash <(curl -s https://codecov.io/bash);
+    #  bash <(curl -s https://codecov.io/bash);
 #     fi
 # after_failure:
 #  - cat -n ~/Library/Logs/scan/*
