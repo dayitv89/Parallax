@@ -66,6 +66,9 @@
     
 }
 
+- (int)addTwoNumbersA:(int)a intB:(int)b {
+    return a+b;
+}
 
 #pragma mark - scroll view delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView1 {
