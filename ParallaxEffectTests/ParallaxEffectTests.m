@@ -7,9 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "ViewController.h"
 
 @interface ParallaxEffectTests : XCTestCase
-
+@property (nonatomic) ViewController *viewC;
 @end
 
 @implementation ParallaxEffectTests
@@ -18,6 +19,7 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.viewC = [ViewController new];
 }
 
 - (void)tearDown
@@ -26,9 +28,13 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void)testAddingSuccess {
+    XCTAssertEqual(15, [self.viewC addTwoNumbersA:5 intB:10]);
 }
+
+//- (void)testAddingFail {
+//    XCTAssertEqual(16, [self.viewC addTwoNumbersA:5 intB:10]);
+//}
+
 
 @end

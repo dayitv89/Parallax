@@ -1,7 +1,7 @@
 # Parallax effect demo
 
 [![Build Status](https://travis-ci.org/dayitv89/Parallax.svg?branch=master)](https://travis-ci.org/dayitv89/Parallax)
-
+[![codecov.io](https://codecov.io/github/dayitv89/Parallax/coverage.svg?branch=master)](https://codecov.io/github/dayitv89/Parallax?branch=master)
 what is Parallax effect?
 
 
