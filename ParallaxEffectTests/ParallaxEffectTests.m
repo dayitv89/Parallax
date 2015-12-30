@@ -32,9 +32,9 @@
     XCTAssertEqual(15, [self.viewC addTwoNumbersA:5 intB:10]);
 }
 
-//- (void)testAddingFail {
-//    XCTAssertEqual(16, [self.viewC addTwoNumbersA:5 intB:10]);
-//}
+- (void)testAddingFail {
+    XCTAssertNotEqual(16, [self.viewC addTwoNumbersA:5 intB:10]);
+}
 
 
 @end
