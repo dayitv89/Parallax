@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode6.4
 xcode_project: ParallaxEffect.xcodeproj
-xcode_scheme: ParallaxEffect
+xcode_scheme: ParallaxEffectTests
 xcode_sdk: iphonesimulator8.4
 # sudo: true
 # env:
