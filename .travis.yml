@@ -37,7 +37,8 @@ matrix:
   # - gem install fastlane --no-rdoc --no-ri --no-document --quiet
 #   - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 #   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-# script:
+script:
+  - xctool -project ParallaxEffect.xcodeproj -scheme ParallaxEffectTests build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
   # - xctool -project ParallaxEffect.xcodeproj -scheme ParallaxEffect build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
   # - xcodebuild -project ParallaxEffect.xcodeproj -target ParallaxEffect -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 #   - set -o pipefail
