@@ -30,6 +30,7 @@
 
 - (void)testAddingSuccess {
     XCTAssertEqual(15, [self.viewC addTwoNumbersA:5 intB:10]);
+    XCTAssertNotEqual(16, [self.viewC addTwoNumbersA:5 intB:10]);
 }
 
 - (void)testAddingFail {
