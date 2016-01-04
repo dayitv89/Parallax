@@ -23,11 +23,19 @@
 		A490AF3E1ABECFC400F72250 /* ParallaxEffectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A490AF3D1ABECFC400F72250 /* ParallaxEffectTests.m */; };
 		A490AF481ABECFED00F72250 /* holi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A490AF471ABECFED00F72250 /* holi.jpg */; };
 		A490AF4A1ABECFF500F72250 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A490AF491ABECFF500F72250 /* bg.png */; };
+		A4B167901C3A586600403E52 /* ParallaxEffectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B1678F1C3A586600403E52 /* ParallaxEffectUITests.m */; };
 		A4E95A0C1ABEDFB400007ED0 /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E95A0B1ABEDFB400007ED0 /* HOME.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A490AF351ABECFC400F72250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A490AF071ABECFC300F72250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A490AF0E1ABECFC400F72250;
+			remoteInfo = ParallaxEffect;
+		};
+		A4B167921C3A586600403E52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A490AF071ABECFC300F72250 /* Project object */;
 			proxyType = 1;
@@ -58,6 +66,9 @@
 		A490AF3D1ABECFC400F72250 /* ParallaxEffectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxEffectTests.m; sourceTree = "<group>"; };
 		A490AF471ABECFED00F72250 /* holi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = holi.jpg; sourceTree = "<group>"; };
 		A490AF491ABECFF500F72250 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		A4B1678D1C3A586600403E52 /* ParallaxEffectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxEffectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4B1678F1C3A586600403E52 /* ParallaxEffectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxEffectUITests.m; sourceTree = "<group>"; };
+		A4B167911C3A586600403E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4E95A0B1ABEDFB400007ED0 /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +93,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4B1678A1C3A586600403E52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,6 +108,7 @@
 			children = (
 				A490AF181ABECFC400F72250 /* ParallaxEffect */,
 				A490AF371ABECFC400F72250 /* ParallaxEffectTests */,
+				A4B1678E1C3A586600403E52 /* ParallaxEffectUITests */,
 				A490AF111ABECFC400F72250 /* Frameworks */,
 				A490AF101ABECFC400F72250 /* Products */,
 			);
@@ -100,6 +119,7 @@
 			children = (
 				A490AF0F1ABECFC400F72250 /* ParallaxEffect.app */,
 				A490AF301ABECFC400F72250 /* ParallaxEffectTests.xctest */,
+				A4B1678D1C3A586600403E52 /* ParallaxEffectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +181,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A4B1678E1C3A586600403E52 /* ParallaxEffectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4B1678F1C3A586600403E52 /* ParallaxEffectUITests.m */,
+				A4B167911C3A586600403E52 /* Info.plist */,
+			);
+			path = ParallaxEffectUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +228,24 @@
 			productReference = A490AF301ABECFC400F72250 /* ParallaxEffectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A4B1678C1C3A586600403E52 /* ParallaxEffectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4B167961C3A586600403E52 /* Build configuration list for PBXNativeTarget "ParallaxEffectUITests" */;
+			buildPhases = (
+				A4B167891C3A586600403E52 /* Sources */,
+				A4B1678A1C3A586600403E52 /* Frameworks */,
+				A4B1678B1C3A586600403E52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4B167931C3A586600403E52 /* PBXTargetDependency */,
+			);
+			name = ParallaxEffectUITests;
+			productName = ParallaxEffectUITests;
+			productReference = A4B1678D1C3A586600403E52 /* ParallaxEffectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,6 +256,10 @@
 				ORGANIZATIONNAME = "___iOS Technology___";
 				TargetAttributes = {
 					A490AF2F1ABECFC400F72250 = {
+						TestTargetID = A490AF0E1ABECFC400F72250;
+					};
+					A4B1678C1C3A586600403E52 = {
+						CreatedOnToolsVersion = 7.1;
 						TestTargetID = A490AF0E1ABECFC400F72250;
 					};
 				};
@@ -228,6 +279,7 @@
 			targets = (
 				A490AF0E1ABECFC400F72250 /* ParallaxEffect */,
 				A490AF2F1ABECFC400F72250 /* ParallaxEffectTests */,
+				A4B1678C1C3A586600403E52 /* ParallaxEffectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,6 +306,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4B1678B1C3A586600403E52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -275,6 +334,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4B167891C3A586600403E52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B167901C3A586600403E52 /* ParallaxEffectUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -282,6 +349,11 @@
 			isa = PBXTargetDependency;
 			target = A490AF0E1ABECFC400F72250 /* ParallaxEffect */;
 			targetProxy = A490AF351ABECFC400F72250 /* PBXContainerItemProxy */;
+		};
+		A4B167931C3A586600403E52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A490AF0E1ABECFC400F72250 /* ParallaxEffect */;
+			targetProxy = A4B167921C3A586600403E52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -449,6 +521,44 @@
 			};
 			name = Release;
 		};
+		A4B167941C3A586600403E52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ParallaxEffectUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.punchh.ParallaxEffectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ParallaxEffect;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A4B167951C3A586600403E52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ParallaxEffectUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.punchh.ParallaxEffectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ParallaxEffect;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -478,6 +588,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A4B167961C3A586600403E52 /* Build configuration list for PBXNativeTarget "ParallaxEffectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4B167941C3A586600403E52 /* Debug */,
+				A4B167951C3A586600403E52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
