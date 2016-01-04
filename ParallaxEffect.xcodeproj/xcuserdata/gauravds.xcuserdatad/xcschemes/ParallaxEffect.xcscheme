@@ -20,6 +20,34 @@
                ReferencedContainer = "container:ParallaxEffect.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A490AF2F1ABECFC400F72250"
+               BuildableName = "ParallaxEffectTests.xctest"
+               BlueprintName = "ParallaxEffectTests"
+               ReferencedContainer = "container:ParallaxEffect.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A4B1678C1C3A586600403E52"
+               BuildableName = "ParallaxEffectUITests.xctest"
+               BlueprintName = "ParallaxEffectUITests"
+               ReferencedContainer = "container:ParallaxEffect.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,6 +63,16 @@
                BlueprintIdentifier = "A490AF2F1ABECFC400F72250"
                BuildableName = "ParallaxEffectTests.xctest"
                BlueprintName = "ParallaxEffectTests"
+               ReferencedContainer = "container:ParallaxEffect.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A4B1678C1C3A586600403E52"
+               BuildableName = "ParallaxEffectUITests.xctest"
+               BlueprintName = "ParallaxEffectUITests"
                ReferencedContainer = "container:ParallaxEffect.xcodeproj">
             </BuildableReference>
          </TestableReference>

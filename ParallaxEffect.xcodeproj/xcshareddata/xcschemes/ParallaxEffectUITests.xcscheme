@@ -14,34 +14,6 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A490AF0E1ABECFC400F72250"
-               BuildableName = "ParallaxEffect.app"
-               BlueprintName = "ParallaxEffect"
-               ReferencedContainer = "container:ParallaxEffect.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A490AF2F1ABECFC400F72250"
-               BuildableName = "ParallaxEffectTests.xctest"
-               BlueprintName = "ParallaxEffectTests"
-               ReferencedContainer = "container:ParallaxEffect.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "A4B1678C1C3A586600403E52"
                BuildableName = "ParallaxEffectUITests.xctest"
                BlueprintName = "ParallaxEffectUITests"
@@ -60,16 +32,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A490AF2F1ABECFC400F72250"
-               BuildableName = "ParallaxEffectTests.xctest"
-               BlueprintName = "ParallaxEffectTests"
-               ReferencedContainer = "container:ParallaxEffect.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "A4B1678C1C3A586600403E52"
                BuildableName = "ParallaxEffectUITests.xctest"
                BlueprintName = "ParallaxEffectUITests"
@@ -77,15 +39,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A490AF2F1ABECFC400F72250"
-            BuildableName = "ParallaxEffectTests.xctest"
-            BlueprintName = "ParallaxEffectTests"
-            ReferencedContainer = "container:ParallaxEffect.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -102,9 +55,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A490AF2F1ABECFC400F72250"
-            BuildableName = "ParallaxEffectTests.xctest"
-            BlueprintName = "ParallaxEffectTests"
+            BlueprintIdentifier = "A4B1678C1C3A586600403E52"
+            BuildableName = "ParallaxEffectUITests.xctest"
+            BlueprintName = "ParallaxEffectUITests"
             ReferencedContainer = "container:ParallaxEffect.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -117,6 +70,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A4B1678C1C3A586600403E52"
+            BuildableName = "ParallaxEffectUITests.xctest"
+            BlueprintName = "ParallaxEffectUITests"
+            ReferencedContainer = "container:ParallaxEffect.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
