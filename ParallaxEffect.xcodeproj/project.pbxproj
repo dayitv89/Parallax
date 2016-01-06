@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A454D8FB1C3D1F670083C8A2 /* BasicConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A454D8FA1C3D1F670083C8A2 /* BasicConfig.m */; };
+		A454D8FE1C3D202A0083C8A2 /* GameConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A454D8FD1C3D202A0083C8A2 /* GameConfig.m */; };
+		A454D9011C3D23950083C8A2 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A454D9001C3D23950083C8A2 /* AppConfig.m */; };
+		A454D9071C3D28930083C8A2 /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A454D9061C3D25490083C8A2 /* ConfigManager.m */; };
 		A490AF131ABECFC400F72250 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A490AF121ABECFC400F72250 /* Foundation.framework */; };
 		A490AF151ABECFC400F72250 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A490AF141ABECFC400F72250 /* CoreGraphics.framework */; };
 		A490AF171ABECFC400F72250 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A490AF161ABECFC400F72250 /* UIKit.framework */; };
@@ -45,6 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A454D8F91C3D1F670083C8A2 /* BasicConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicConfig.h; sourceTree = "<group>"; };
+		A454D8FA1C3D1F670083C8A2 /* BasicConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicConfig.m; sourceTree = "<group>"; };
+		A454D8FC1C3D202A0083C8A2 /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		A454D8FD1C3D202A0083C8A2 /* GameConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameConfig.m; sourceTree = "<group>"; };
+		A454D8FF1C3D23950083C8A2 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		A454D9001C3D23950083C8A2 /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		A454D9051C3D25490083C8A2 /* ConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		A454D9061C3D25490083C8A2 /* ConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
 		A490AF0F1ABECFC400F72250 /* ParallaxEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A490AF121ABECFC400F72250 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A490AF141ABECFC400F72250 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +160,14 @@
 				A4E95A0B1ABEDFB400007ED0 /* HOME.png */,
 				A490AF2A1ABECFC400F72250 /* Images.xcassets */,
 				A490AF191ABECFC400F72250 /* Supporting Files */,
+				A454D8F91C3D1F670083C8A2 /* BasicConfig.h */,
+				A454D8FA1C3D1F670083C8A2 /* BasicConfig.m */,
+				A454D8FC1C3D202A0083C8A2 /* GameConfig.h */,
+				A454D8FD1C3D202A0083C8A2 /* GameConfig.m */,
+				A454D8FF1C3D23950083C8A2 /* AppConfig.h */,
+				A454D9001C3D23950083C8A2 /* AppConfig.m */,
+				A454D9051C3D25490083C8A2 /* ConfigManager.h */,
+				A454D9061C3D25490083C8A2 /* ConfigManager.m */,
 			);
 			path = ParallaxEffect;
 			sourceTree = "<group>";
@@ -320,9 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A454D9071C3D28930083C8A2 /* ConfigManager.m in Sources */,
+				A454D8FE1C3D202A0083C8A2 /* GameConfig.m in Sources */,
+				A454D8FB1C3D1F670083C8A2 /* BasicConfig.m in Sources */,
 				A490AF291ABECFC400F72250 /* ViewController.m in Sources */,
 				A490AF231ABECFC400F72250 /* AppDelegate.m in Sources */,
 				A490AF1F1ABECFC400F72250 /* main.m in Sources */,
+				A454D9011C3D23950083C8A2 /* AppConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +620,7 @@
 				A4B167951C3A586600403E52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
