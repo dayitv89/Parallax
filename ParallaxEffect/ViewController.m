@@ -7,15 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "ConfigManager.h"
 
-@interface ViewController ()<UIScrollViewDelegate>
-{
+@interface ViewController ()<UIScrollViewDelegate> {
     IBOutlet UIImageView *imgView;
-    
     IBOutlet UIScrollView *scrollView;
-    
     CGRect imgViewFrame;
-
 }
 @end
 
@@ -25,7 +22,6 @@
 {
     [super viewDidLoad];
 
-    
     //--- ios parallex effect
     // Set vertical effect
     UIInterpolatingMotionEffect *verticalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y"
@@ -63,7 +59,7 @@
     
     imgViewFrame = imgView.frame;
     
-    
+    [[ConfigManager sharedInstance] testConfigProtocol];
 }
 
 - (int)addTwoNumbersA:(int)a intB:(int)b {
@@ -95,9 +91,6 @@
     // scroll down (must be zoom to center)
     return CGRectMake(frame.origin.x + val, frame.origin.y + val, frame.size.width - val*factor, frame.size.height - val*factor);
 }
-
-
-
 
 - (void)didReceiveMemoryWarning
 {
