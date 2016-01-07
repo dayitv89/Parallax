@@ -12,10 +12,10 @@
 
 @interface BasicConfig : NSObject
 
-@property (nonatomic, strong) GameConfig *gameConfig;
+@property (nonatomic, readonly) GameConfig * gameConfig;
 
-@property (nonatomic, strong) NSString *appName;
-@property (nonatomic, strong) NSString *appVersion;
+@property (nonatomic, strong) NSString * const appName;
+@property (nonatomic, strong) NSString * const appVersion;
 @end
 
 @protocol BaseConfigDataSource <NSObject>

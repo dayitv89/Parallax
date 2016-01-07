@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface GameConfig : NSObject
-@property (nonatomic, strong) NSString *gameName;
-@property (nonatomic, strong) NSString *gameVersion;
+- (void)setDefault;
+@property (nonatomic, strong) NSString *const gameName;
+@property (nonatomic, strong) NSString *const gameVersion;
 @end
 
 @protocol GameConfigDataSource <NSObject>

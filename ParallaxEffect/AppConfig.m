@@ -12,10 +12,11 @@
 
 - (void)customBasicConfig {
     self.appName = @"custom app";
+    self.appVersion = @"custom app version v 1.0";
 }
 
 - (void)customGameConfig {
-    self.gameConfig.gameName = @"Game Name";
+    self.gameConfig.gameName = @"custom Game name";
 }
 
 @end

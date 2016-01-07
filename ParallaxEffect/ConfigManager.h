@@ -12,7 +12,7 @@
 
 
 @interface ConfigManager : NSObject
-
+@property (nonatomic, readonly) BasicConfig *basicConfig;
 + (ConfigManager*)sharedInstance;
 - (void)testConfigProtocol;
 
