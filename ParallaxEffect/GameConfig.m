@@ -10,12 +10,15 @@
 
 @implementation GameConfig
 
-- (NSString*)gameConfigName {
-    return @"Angry Bird";
+- (instancetype)init {
+    self = [super init];
+    [self setDefault];
+    return self;
 }
 
-- (NSString*)gameConfigVersion {
-    return @"gc1.0.0";
+- (void)setDefault {
+    _gameName = @"Game Default";
+    _gameVersion = @"gc v1.0.0";
 }
 
 @end

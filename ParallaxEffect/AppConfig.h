@@ -7,7 +7,8 @@
 //
 
 #import "BasicConfig.h"
+#import "GameConfig.h"
 
-@interface AppConfig : BasicConfig <GameConfigDataSource, BasicConfigDataSource>
+@interface AppConfig : BasicConfig <BaseConfigDataSource, GameConfigDataSource>
 
 @end

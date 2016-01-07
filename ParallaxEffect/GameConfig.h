@@ -8,16 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol GameConfigDataSource <NSObject>
-
-@required
-- (NSString*)gameConfigName;
-
-@optional
-- (NSString*)gameConfigVersion;
-
+@interface GameConfig : NSObject
+@property (nonatomic, strong) NSString *gameName;
+@property (nonatomic, strong) NSString *gameVersion;
 @end
 
-@interface GameConfig : NSObject <GameConfigDataSource>
-
+@protocol GameConfigDataSource <NSObject>
+- (void)customGameConfig;
 @end

@@ -8,7 +8,11 @@
 
 #import "ConfigManager.h"
 #import "AppConfig.h"
-#import "GameConfig.h"
+
+@interface ConfigManager ()
+@property (nonatomic, readonly) BasicConfig *basicConfig;
+@property (nonatomic, readonly) GameConfig *gameConfig;
+@end
 
 @implementation ConfigManager
 
@@ -23,12 +27,31 @@
     return SINGLETON;
 }
 
-- (void)testConfigProtocol {
-    AppConfig *appConfig = [AppConfig new];
-    NSLog(@"%@", [appConfig basicConfigName]);
-    NSLog(@"%@", [appConfig basicConfigVersion]);
-    NSLog(@"%@", [appConfig gameConfigName]);
-    NSLog(@"%@", [appConfig gameConfigVersion]);
+- (instancetype)init {
+    self = [super init];
+    _basicConfig = [AppConfig new];
+    _gameConfig = [GameConfig new];
+    return self;
 }
 
+- (void)testConfigProtocol {
+    NSLog(@"%@", [ConfigManager sharedInstance].basicConfig.appName);
+    NSLog(@"%@", [ConfigManager sharedInstance].basicConfig.appVersion);
+    NSLog(@"%@", [ConfigManager sharedInstance].gameConfig.gameName);
+    NSLog(@"%@", [ConfigManager sharedInstance].gameConfig.gameVersion);
+}
+
+//
+//- (id)processSelector:(SEL)selector {
+//    AppConfig *appConfig = [AppConfig new];
+//    if ([appConfig respondsToSelector:selector]) {
+//        return [appConfig performSelector:selector];
+//    } else {
+//        GameConfig *gameConfig = [GameConfig new];
+//        return [gameConfig performSelector:selector];
+//    }
+//    return nil;
+//}
+
 @end
+

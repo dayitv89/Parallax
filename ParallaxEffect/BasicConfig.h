@@ -9,12 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "GameConfig.h"
 
-@protocol BasicConfigDataSource <NSObject>
-@required
-- (NSString*)basicConfigName;
-- (NSString*)basicConfigVersion;
+
+@interface BasicConfig : NSObject
+
+@property (nonatomic, strong) GameConfig *gameConfig;
+
+@property (nonatomic, strong) NSString *appName;
+@property (nonatomic, strong) NSString *appVersion;
 @end
 
-@interface BasicConfig : NSObject <BasicConfigDataSource>
-
+@protocol BaseConfigDataSource <NSObject>
+- (void)customBasicConfig;
 @end

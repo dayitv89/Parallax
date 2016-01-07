@@ -10,12 +10,12 @@
 
 @implementation AppConfig
 
-- (NSString *)basicConfigName {
-    return @"ParallaxEffect";
+- (void)customBasicConfig {
+    self.appName = @"custom app";
 }
 
-//- (NSString *)gameConfigName {
-//    return @"Temple Run";
-//}
+- (void)customGameConfig {
+    self.gameConfig.gameName = @"Game Name";
+}
 
 @end
