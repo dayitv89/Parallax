@@ -7,15 +7,15 @@
 //
 
 #import "BasicConfig.h"
-#import "GameConfig.h"
 
 @implementation BasicConfig
 
 - (instancetype)init {
     self = [super init];
     _gameConfig = [GameConfig new];
-    [self callDataSource];
     [self setDefault];
+    [self callDataSource];
+    [self disableSetter];
     return self;
 }
 
@@ -36,5 +36,7 @@
         [self performSelector:@selector(customGameConfig)];
     }
 }
+
+
 
 @end

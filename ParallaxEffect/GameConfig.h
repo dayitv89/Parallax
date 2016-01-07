@@ -6,12 +6,12 @@
 //  Copyright © 2016 ___iOS Technology___. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseSetter.h"
 
-@interface GameConfig : NSObject
+@interface GameConfig : BaseSetter
 - (void)setDefault;
-@property (nonatomic, strong) NSString *const gameName;
-@property (nonatomic, strong) NSString *const gameVersion;
+@property (nonatomic, strong) NSString *gameName;
+@property (nonatomic, strong) NSString *gameVersion;
 @end
 
 @protocol GameConfigDataSource <NSObject>

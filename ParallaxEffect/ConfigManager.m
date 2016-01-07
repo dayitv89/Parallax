@@ -16,26 +16,30 @@
 
 #pragma mark - Public Method
 
-+ (id)sharedInstance {
-    static ConfigManager *SINGLETON = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        SINGLETON = [[ConfigManager alloc] init];
++ (instancetype)sharedInstance {
+    static dispatch_once_t oncePredicate = 0;
+    __strong static ConfigManager *_sharedInstance = nil;
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[self alloc] init];
     });
-    return SINGLETON;
+    return _sharedInstance;
 }
+
 
 - (instancetype)init {
     self = [super init];
-    _basicConfig = [AppConfig new];
+    if (!_basicConfig) {
+        _basicConfig = [[AppConfig alloc] init];
+    }
     return self;
 }
 
 - (void)testConfigProtocol {
-    NSLog(@"%@", [ConfigManager sharedInstance].basicConfig.appName);
-    NSLog(@"%@", [ConfigManager sharedInstance].basicConfig.appVersion);
-    NSLog(@"%@", [ConfigManager sharedInstance].basicConfig.gameConfig.gameName);
-    NSLog(@"%@", [ConfigManager sharedInstance].basicConfig.gameConfig.gameVersion);
+    [[ConfigManager alloc]init].basicConfig.appName = @"test name";
+    NSLog(@"abc %@", [[ConfigManager alloc]init].basicConfig.appName);
+    NSLog(@"2%@", [ConfigManager sharedInstance].basicConfig.appVersion);
+    NSLog(@"3%@", [ConfigManager sharedInstance].basicConfig.gameConfig.gameName);
+    NSLog(@"4%@", [ConfigManager sharedInstance].basicConfig.gameConfig.gameVersion);
 }
 
 @end

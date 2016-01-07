@@ -59,8 +59,6 @@
     
     imgViewFrame = imgView.frame;
     
-    [[ConfigManager sharedInstance].basicConfig setAppName:@""];
-    
     [[ConfigManager sharedInstance] testConfigProtocol];
 }
 
