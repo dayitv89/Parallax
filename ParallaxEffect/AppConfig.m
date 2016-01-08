@@ -10,13 +10,18 @@
 
 @implementation AppConfig
 
-- (void)customBasicConfig {
-    self.appName = @"custom app";
-    self.appVersion = @"custom app version v 1.0";
+- (BasicConfig *)customBasicConfig {
+    BasicConfig *basicConfig = [BasicConfig new];
+    basicConfig.appName = @"custom app";
+    basicConfig.appVersion = @"custom app version v 1.0";
+    return basicConfig;
 }
 
-- (void)customGameConfig {
-    self.gameConfig.gameName = @"custom Game name";
+- (GameConfig*)customGameConfig {
+    GameConfig *gameConfig = [GameConfig new];
+    gameConfig.gameName = @"custom Game name";
+    gameConfig.gameVersion = @"custom ve 2.0";
+    return gameConfig;
 }
 
 @end

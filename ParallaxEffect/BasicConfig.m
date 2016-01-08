@@ -12,31 +12,13 @@
 
 - (instancetype)init {
     self = [super init];
-    _gameConfig = [GameConfig new];
     [self setDefault];
-    [self callDataSource];
-    [self disableSetter];
     return self;
 }
 
 - (void)setDefault {
     self.appName = @"App Default";
     self.appVersion = @"ac v1.0.0";
-    [self.gameConfig setDefault];
 }
-
-- (void)callDataSource {
-    if ([self conformsToProtocol:@protocol(BaseConfigDataSource)] &&
-        [self respondsToSelector:@selector(customBasicConfig)]) {
-        [self performSelector:@selector(customBasicConfig)];
-    }
-    
-    if ([self conformsToProtocol:@protocol(GameConfigDataSource)] &&
-        [self respondsToSelector:@selector(customGameConfig)]) {
-        [self performSelector:@selector(customGameConfig)];
-    }
-}
-
-
 
 @end

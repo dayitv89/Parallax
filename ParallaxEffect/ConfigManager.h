@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicConfig.h"
+#import "GameConfig.h"
 
 @interface ConfigManager : NSObject
-@property (nonatomic, strong) BasicConfig *basicConfig;
+
+@property (nonatomic, readonly) BasicConfig *basicConfig;
+@property (nonatomic, readonly) GameConfig *gameConfig;
+
+
 + (instancetype)sharedInstance;
+
+//-- temp testing method
 - (void)testConfigProtocol;
 
 @end

@@ -6,19 +6,18 @@
 //  Copyright © 2016 ___iOS Technology___. All rights reserved.
 //
 
-#import "BaseSetter.h"
-#import "GameConfig.h"
+#import <Foundation/Foundation.h>
 
-
-@interface BasicConfig : BaseSetter
-
-@property (nonatomic, readonly) GameConfig * gameConfig;
+@interface BasicConfig : NSObject
 
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *appVersion;
 
+- (instancetype)init;
+
 @end
 
+
 @protocol BaseConfigDataSource <NSObject>
-- (void)customBasicConfig;
+- (BasicConfig*)customBasicConfig;
 @end

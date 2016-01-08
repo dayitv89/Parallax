@@ -10,10 +10,15 @@
 
 @implementation GameConfig
 
+- (instancetype)init {
+    self = [super init];
+    [self setDefault];
+    return self;
+}
+
 - (void)setDefault {
     self.gameName = @"Game Default";
     self.gameVersion = @"gc v1.0.0";
-    [self disableSetter];
 }
 
 @end
