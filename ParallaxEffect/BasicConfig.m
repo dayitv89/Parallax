@@ -19,6 +19,8 @@
 - (void)setDefault {
     self.appName = @"App Default";
     self.appVersion = @"ac v1.0.0";
+    self.index = 0;
+    self.rect = CGRectZero;
 }
 
 @end

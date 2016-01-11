@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+Clone.h"
 
 @interface BasicConfig : NSObject
 
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *appVersion;
+@property (nonatomic) NSInteger index;
+@property (nonatomic) CGRect rect;
 
 - (instancetype)init;
 

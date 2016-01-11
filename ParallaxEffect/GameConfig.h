@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+Clone.h"
 
 @interface GameConfig : NSObject
 

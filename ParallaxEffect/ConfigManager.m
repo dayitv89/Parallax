@@ -6,7 +6,6 @@
 //  Copyright © 2016 ___iOS Technology___. All rights reserved.
 //
 
-#import <objc/runtime.h>
 #import "ConfigManager.h"
 #import "AppConfig.h"
 
@@ -31,25 +30,14 @@
 }
 
 - (BasicConfig *)basicConfig {
-    return [self clone:_basicConfig];
+    return [_basicConfig clone];
 }
 
 - (GameConfig *)gameConfig {
-    return [self clone:_gameConfig];
+    return [_gameConfig clone];
 }
 
 #pragma mark - Private Method
-- (id)clone:(id)obj {
-    id objNew = [[obj class] new];
-    unsigned int count;
-    Ivar* ivars = class_copyIvarList([obj class], &count);
-    for(unsigned int i = 0; i < count; ++i) {
-        NSString *key = [NSString stringWithFormat:@"%s",ivar_getName(ivars[i])];
-        [objNew setValue:[obj valueForKey:key] forKey:key];
-    }
-    return objNew;
-}
-
 - (void)setAllDataOnce {
     _basicConfig = [[BasicConfig alloc] init];
     [self callDataSource];
@@ -59,12 +47,12 @@
     AppConfig *appConfig = [AppConfig new];
     if ([appConfig conformsToProtocol:@protocol(BaseConfigDataSource)] &&
         [appConfig respondsToSelector:@selector(customBasicConfig)]) {
-        _basicConfig = [appConfig performSelector:@selector(customBasicConfig)];
+        _basicConfig = [[appConfig performSelector:@selector(customBasicConfig)] clone];
     }
     
     if ([appConfig conformsToProtocol:@protocol(GameConfigDataSource)] &&
         [appConfig respondsToSelector:@selector(customGameConfig)]) {
-        _gameConfig = [appConfig performSelector:@selector(customGameConfig)];
+        _gameConfig = [[appConfig performSelector:@selector(customGameConfig)] clone];
     }
 }
 
@@ -76,8 +64,11 @@
     [ConfigManager sharedInstance].gameConfig.gameName = @"test game name";
     NSLog(@"%@",[ConfigManager sharedInstance].basicConfig.appName);
     NSLog(@"%@", [ConfigManager sharedInstance].basicConfig.appVersion);
+    NSLog(@"%d", [ConfigManager sharedInstance].basicConfig.index);
+    NSLog(@"%@", NSStringFromCGRect([ConfigManager sharedInstance].basicConfig.rect));
     NSLog(@"%@", [ConfigManager sharedInstance].gameConfig.gameName);
     NSLog(@"%@", [ConfigManager sharedInstance].gameConfig.gameVersion);
+    
 }
 
 @end

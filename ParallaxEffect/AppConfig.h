@@ -9,6 +9,6 @@
 #import "BasicConfig.h"
 #import "GameConfig.h"
 
-@interface AppConfig : NSObject <BaseConfigDataSource, GameConfigDataSource>
+@interface AppConfig : BasicConfig <BaseConfigDataSource, GameConfigDataSource>
 
 @end
