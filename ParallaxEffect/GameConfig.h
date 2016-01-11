@@ -7,17 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+Clone.h"
 
-@protocol GameConfigDataSource <NSObject>
+@interface GameConfig : NSObject
 
-@required
-- (NSString*)gameConfigName;
+@property (nonatomic, strong) NSString *gameName;
+@property (nonatomic, strong) NSString *gameVersion;
 
-@optional
-- (NSString*)gameConfigVersion;
+- (instancetype)init;
 
 @end
 
-@interface GameConfig : NSObject <GameConfigDataSource>
 
+@protocol GameConfigDataSource <NSObject>
+- (GameConfig*)customGameConfig;
 @end

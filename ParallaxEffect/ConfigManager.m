@@ -8,27 +8,68 @@
 
 #import "ConfigManager.h"
 #import "AppConfig.h"
-#import "GameConfig.h"
+
+@interface ConfigManager ()
+@property (nonatomic, readwrite) BasicConfig *basicConfig;
+@property (nonatomic, readwrite) GameConfig *gameConfig;
+@end
+
 
 @implementation ConfigManager
 
 #pragma mark - Public Method
 
-+ (id)sharedInstance {
-    static ConfigManager *SINGLETON = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        SINGLETON = [[ConfigManager alloc] init];
++ (instancetype)sharedInstance {
+    static dispatch_once_t oncePredicate = 0;
+    __strong static ConfigManager *_sharedInstance = nil;
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[super alloc] init];
+        [_sharedInstance setAllDataOnce];
     });
-    return SINGLETON;
+    return _sharedInstance;
 }
 
-- (void)testConfigProtocol {
+- (BasicConfig *)basicConfig {
+    return [_basicConfig clone];
+}
+
+- (GameConfig *)gameConfig {
+    return [_gameConfig clone];
+}
+
+#pragma mark - Private Method
+- (void)setAllDataOnce {
+    _basicConfig = [[BasicConfig alloc] init];
+    [self callDataSource];
+}
+
+- (void)callDataSource {
     AppConfig *appConfig = [AppConfig new];
-    NSLog(@"%@", [appConfig basicConfigName]);
-    NSLog(@"%@", [appConfig basicConfigVersion]);
-    NSLog(@"%@", [appConfig gameConfigName]);
-    NSLog(@"%@", [appConfig gameConfigVersion]);
+    if ([appConfig conformsToProtocol:@protocol(BaseConfigDataSource)] &&
+        [appConfig respondsToSelector:@selector(customBasicConfig)]) {
+        _basicConfig = [[appConfig performSelector:@selector(customBasicConfig)] clone];
+    }
+    
+    if ([appConfig conformsToProtocol:@protocol(GameConfigDataSource)] &&
+        [appConfig respondsToSelector:@selector(customGameConfig)]) {
+        _gameConfig = [[appConfig performSelector:@selector(customGameConfig)] clone];
+    }
+}
+
+
+#pragma mark - Test method 
+#pragma mark --temp -remove-it
+- (void)testConfigProtocol {
+    [ConfigManager sharedInstance].basicConfig.appName = @"test name";
+    [ConfigManager sharedInstance].gameConfig.gameName = @"test game name";
+    NSLog(@"%@",[ConfigManager sharedInstance].basicConfig.appName);
+    NSLog(@"%@", [ConfigManager sharedInstance].basicConfig.appVersion);
+    NSLog(@"%d", [ConfigManager sharedInstance].basicConfig.index);
+    NSLog(@"%@", NSStringFromCGRect([ConfigManager sharedInstance].basicConfig.rect));
+    NSLog(@"%@", [ConfigManager sharedInstance].gameConfig.gameName);
+    NSLog(@"%@", [ConfigManager sharedInstance].gameConfig.gameVersion);
+    
 }
 
 @end
+

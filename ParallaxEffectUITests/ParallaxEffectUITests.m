@@ -36,6 +36,16 @@
 }
 
 - (void)testScroll {
+    
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    [app.scrollViews.images[@"bg.png"] tap];
+//    
+//    XCUIElement *textView = [app.scrollViews childrenMatchingType:XCUIElementTypeTextView].element;
+//    [textView tap];
+//    [[app.scrollViews containingType:XCUIElementTypeImage identifier:@"bg.png"].element tap];
+//    [textView swipeDown];
+//    [textView tap];
+//    [textView tap];
     XCUIElementQuery *scrollViewsQuery = [[XCUIApplication alloc] init].scrollViews;
     XCUIElement *image = [[scrollViewsQuery childrenMatchingType:XCUIElementTypeImage] elementBoundByIndex:1];
     //[self waitForExpectationsWithTimeout:15 handler:nil];

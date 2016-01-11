@@ -8,29 +8,19 @@
 
 #import "BasicConfig.h"
 
-@implementation BasicConfig 
+@implementation BasicConfig
 
-- (NSString*)basicConfigName {
-    return @"BaseConfig class";
+- (instancetype)init {
+    self = [super init];
+    [self setDefault];
+    return self;
 }
 
-- (NSString*)basicConfigVersion {
-    return @"bc1.0.0";
-}
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation {
-    SEL aSelector = [anInvocation selector];
-    if ([self respondsToSelector:aSelector]) {
-        [super forwardInvocation:anInvocation];
-    } else {
-        Class c = NSClassFromString(@"GameConfig");
-        id obj = [[c alloc] init];
-        if ([obj respondsToSelector:aSelector]) {
-            [anInvocation invokeWithTarget:obj];
-        } else {
-            NSLog(@"method not found %@", NSStringFromSelector(aSelector));
-        }
-    }
+- (void)setDefault {
+    self.appName = @"App Default";
+    self.appVersion = @"ac v1.0.0";
+    self.index = 0;
+    self.rect = CGRectZero;
 }
 
 @end

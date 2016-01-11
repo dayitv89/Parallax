@@ -7,14 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BasicConfig.h"
+#import "GameConfig.h"
 
 @interface ConfigManager : NSObject
 
-/**
- * gets singleton object.
- * @return singleton
- */
-+ (ConfigManager*)sharedInstance;
+@property (nonatomic, readonly) BasicConfig *basicConfig;
+@property (nonatomic, readonly) GameConfig *gameConfig;
+
+
++ (instancetype)sharedInstance;
+
+//-- temp testing method
 - (void)testConfigProtocol;
 
 @end

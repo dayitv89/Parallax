@@ -10,12 +10,18 @@
 
 @implementation AppConfig
 
-- (NSString *)basicConfigName {
-    return @"ParallaxEffect";
+- (BasicConfig *)customBasicConfig {
+//    BasicConfig *basicConfig = [BasicConfig new];
+    self.appName = @"custom app";
+    self.appVersion = nil;//@"custom app version v 1.0";
+    return self;
 }
 
-//- (NSString *)gameConfigName {
-//    return @"Temple Run";
-//}
+- (GameConfig*)customGameConfig {
+    GameConfig *gameConfig = [GameConfig new];
+    gameConfig.gameName = @"custom Game name";
+    gameConfig.gameVersion = @"custom ve 2.0";
+    return gameConfig;
+}
 
 @end
